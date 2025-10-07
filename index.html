@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body style="font-family: 'Times New Roman', Times, serif;">
+
+    <nav class="navbar navbar-expand-lg  bg-success">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Premios</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  style="font-family: 'Times New Roman', Times, serif;" href="premios.html">Agregar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <br>
+      <br>
+
+      <div class="container mt-5">
+        <h1 class="mb-4">Premios</h1>
+       
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-6">
+                <a href="#" class="btn btn-success btn-lg shadow">
+             Crear
+                </a><div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="itemModalLabel">Agregar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <form id="productForm">
+                    <input type="hidden" id="productId" />
+                    <input type="hidden" id="productImageUrl" />
+                    <div class="mb-3">
+                        <label for="productName" class="form-label">Nombre <span style="color:red">*</span></label>
+                        <input type="text" class="form-control" id="productName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="productDescription" class="form-label">Premio <span style="color:red">*</span></label>
+                        <textarea class="form-control" id="productDescription" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="productStock" class="form-label">Titulo<span style="color:red">*</span></label>
+                        <input type="number" min="0" step="1" class="form-control" id="productStock" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="productPrice" class="form-label">Director <span style="color:red">*</span></label>
+                        <input type="number" step="0.01" class="form-control" id="productPrice" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="productPrice" class="form-label">Categoria <span style="color:red">*</span></label>
+                        <input type="number" step="0.01" class="form-control" id="productPrice" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="productPrice" class="form-label">Resultado <span style="color:red">*</span></label>
+                        <input type="number" step="0.01" class="form-control" id="productPrice" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="productPrice" class="form-label">Año <span style="color:red">*</span></label>
+                        <input type="number" step="0.01" class="form-control" id="productPrice" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="productPrice" class="form-label">Fecha de Ingreso <span style="color:red">*</span></label>
+                        <input type="number" step="0.01" class="form-control" id="productPrice" required />
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="saveProduct">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Buscar">
+                    <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="table-responsive-custom">
+            <table class="table table-hover table-striped border shadow-sm">
+                <thead class="table-dark">
+                    <tr>
+                        
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Premio</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Director</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Año</th>
+                        <th scope="col">Resultado</th>
+                        <th scope="col">Fecha de Registro</th>
+                       
+                    </tr>
+                </thead>
+                <tbody id="tabla">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+ 
+   
+    
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

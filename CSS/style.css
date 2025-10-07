@@ -1,0 +1,19 @@
+.navbar {
+    background-color: darkseagreen;
+}
+
+.tab { 
+flex-direction: column;
+
+color: honeydew;
+}
+
+.formEd {
+    text-align: center;
+    flex-direction: row;
+    align-content: center;
+}
+
+.table-responsive-custom {
+    overflow-x: auto;
+}
