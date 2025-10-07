@@ -11,7 +11,7 @@ export async function getPremios(){
 export async function createPremio (data) {
     await fetch ('${API_URL'}'/newPremio;
         method: "POST",
-        headers : { "Content-Type": application/json"},
+        headers: { "Content-Type"; application/json"},
             body: JSON.stringify (data)
 });
 }
@@ -29,4 +29,5 @@ export async function  deletePremio (id) {
     method: "DELETE"
   });
 }
+
 

@@ -58,15 +58,21 @@ async function loadPremios (){
             '<td colspan = "5"> Actualmente no hay registros </td>';
             return;
         }
-        premios.forEach ((prem)) => {
-            const tr = document.createElement("tr");
-            tdId.textContent = prem.idPremio;
+        premios.forEach ((prem) => {
+           const tr = document.createElement("tr")
 
-            const tdNombre = document.createeLEMENT
+           const tdId = document.createElement("id");
+           tdId.textContent = prem.idPremio;
+
+           const tdNombre = document.createElement("td");
+
+           const tdTitulo = document.createElement("td");
+           tdTitulo.textContent = 
+           prem.titulo || "Titulo no asignado";
+
+           const tdFecha = document.createElement ("td");
+           tdFecha.textContent = prem.fechaRegistro || " ";
         }
-    }
-
-}
 
 
 
